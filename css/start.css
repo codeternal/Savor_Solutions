@@ -1,0 +1,152 @@
+.Container-3 { /* positioning of pictures */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.Picture { /* design of pictures */
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 5px solid #fff;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -50%);
+  user-select: none;
+  cursor: pointer;
+  animation: pictureAnimation 1.5s ease-in-out infinite alternate;
+}
+
+.Picture-img { /* size of pictures*/
+  display: block;
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+}
+
+.Picture-note { /* name of pictures*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 70px;
+  padding: 12px 24px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.Network {/* savior solution last picture postion*/
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.Network img {/* savior solution image size*/
+  width: 1.5rem;
+  aspect-ratio: 1 / 1;
+  vertical-align: middle;
+}
+
+* {/* size of borders*/
+  box-sizing: border-box;
+}
+
+body {
+  font: 15px/1.5 times-new-roman;
+  padding: 0;
+  margin: 0;
+  background-color: #d1ba98; /* background color of website */
+}
+
+.start {/*design for start button*/
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style-type: none;
+  
+  
+}.start a:hover {/* animation of start button*/
+  background-color: #d32f0f;
+}
+
+
+.start a {/* design for name start button*/
+  display: inline-block;
+  padding: 20px 60px;
+  background-color: #ff4c29;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+
+.title {/* design for savior solution title*/
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: white;
+  animation: titleAnimation 1.5s ease-in-out infinite alternate;
+text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}@keyframes titleAnimation {/* animation of title savior solution*/
+  0% {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+}
+
+
+.favorite-button {
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+  background-color: #8C7F79; /* Add your desired background color here */
+  color: #ffffff;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  animation: color-animation 2s ease-in-out infinite, jump-animation 0.5s ease-in-out infinite;
+}
+
+.favorite-button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #665c56; /* Add your desired hover background color here */
+  animation: none; /* Disable the animation on hover */
+}
+
+@keyframes color-animation {
+  0% {
+    background-color: #8C7F79;
+  }
+  50% {
+    background-color: #665c56;
+  }
+  100% {
+    background-color: #8C7F79;
+  }
+}
+
+@keyframes jump-animation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

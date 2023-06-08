@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Savor Solutions Search</title>
+    <link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/side.css">
+    <link rel="icon" href="img/search.png">
+  </head>
+  <body>
+   <header>
+      <div class="container">
+        <div id="branding">
+		<img src="img/logo.png" alt="picture" class="logoimg">
+          <h1 class="logo-title">Savor Solutions</h1>
+        </div>
+
+        <nav>
+          <ul>
+            <li ><a href="home.html">Home</a></li>
+            <li class="current"><a href="search.html">Search</a></li>
+            <li><a href="about.html">About</a></li>
+					<li><a id="togglebtn">Profile</a></li>	
+          </ul>
+        </nav>
+      </div>
+	  
+	  <div class="container-sidebar">
+	  
+  <div>
+    <div id="sidebar" class="sidebar">
+      <span id="closebtn">&times;</span>
+      <div class="profile-info">
+        <img src="img/profile.jfif" alt="Profile Image">
+	
+        <h2>User Name</h2>
+
+  <a href="start.html" class="logout-button">Logout</a>
+
+
+      </div>
+      <h3>Saved</h3><br>
+      <div class="recipe-grid">
+        <div class="recipe-item">
+		<a href="search.html">
+          <img src="food/adobo.jfif" alt="Pizza">
+		  </a>
+          <p>Adobo</p>
+        </div>
+        <div class="recipe-item">
+		<a href="search.html">
+          <img src="img/fishball.jfif" alt="Pizza">
+		  </a>
+          <p>Pancit</p>
+        </div>
+		<div class="recipe-item">
+		<a href="search.html">
+          <img src="img/karekare.jfif" alt="Pizza">
+		  </a>
+          <p>Kare Kare</p>
+        </div>
+		<div class="recipe-item">
+		<a href="search.html">
+          <img src="img/lechon.jfif" alt="Pizza">
+		  </a>
+          <p>Lechon</p>
+        </div>
+		<div class="recipe-item">
+		<a href="search.html">
+          <img src="img/lumpia.jfif" alt="Pizza">
+		  </a>
+          <p>Lumpia</p>
+        </div>
+		<div class="recipe-item">
+		<a href="search.html">
+          <img src="img/halohalo.jfif" alt="Pizza">
+		  </a>
+          <p>Halo Halo</p>
+        </div>
+		<div class="recipe-item">
+		<a href="search.html">
+          <img src="img/pritingtilapya.jfif" alt="Pizza">
+		  </a>
+          <p>Fried Tilapia</p>
+        </div>
+		<div class="recipe-item">
+		<a href="search.html">
+          <img src="img/sinigang.jfif" alt="Pizza">
+		  </a>
+          <p>Sinigang</p>
+        </div>
+		
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</header>
+
+    <!-- search for recipe -->
+	 <section id="recipe-search">
+	  <div class="container">
+		<div class="search-form">
+		  <h1>Search for Recipe</h1>
+		  <form @submit.prevent="search">
+			<input id="searchInput" type="text" v-model="searchTerm" placeholder="Search Recipe here..." />
+			<button type="submit" class="button_1">Search</button>
+		  </form>
+		</div>
+
+		<h2>Search Results</h2>
+		<div id="results">
+		  <div v-if="searchResults.length > 0">
+		   <h2<div v-for="recipe in searchResults" class="recipe"></h2>
+			 
+	  <h4 >{{ recipe.title }}</h4>
+	  <h2><img :src="recipe.image" :alt="recipe.title" class="recipe-image" /></h2>
+	  <div class="recipe-result--ingredients">
+		<div>
+		<p >Ingredient:</p>
+		  <li v-for="ingredient in recipe.ingredients" :key="ingredient">{{ ingredient }}</li>
+		</div>
+	  </div>
+	  <p >Instructions:</p>
+	<p class="procedure" v-html="formatInstructions(recipe.instructions)"></p>
+	  <h2 ><video :src="recipe.video" controls></video></h2>
+		<h2 >Reference: www.youtube.com</h2>
+	  <h2 ><button href="search.html" class="favorite-button">Add Save</button><h2>
+	</div>
+
+		  </div>
+		  <div v-else-if="searchTerm !== ''">
+			{{ noResultsMessage }}
+		  </div>
+		</div>
+	  </div>
+	</section>
+
+
+
+	<ul id="products">
+	  <div>
+		<h6 class="food-name">Product 1</h6>
+		<div class="recipe_menu">
+		  <div>
+		 <!-- Add the recipe button here -->
+			<div class="recipe">Recipe for Product 1 goes here..</div>
+		  </div>
+		  <div class="procedure">Procedure for Product 1 goes here...</div>
+		</div>
+	  </div>
+	  <!-- Add more product items as needed -->
+	</ul>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>

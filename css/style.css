@@ -1,0 +1,516 @@
+body{
+  font: 15px/1.5 times-new-roman;
+  padding:0;
+  margin:0;
+  background-color:#D1BA98;/* background color of website */
+}
+
+
+.container{/* alinging all postion in website */
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+.container-img {
+  width: 170px; /* Set a fixed width in pixels */
+  height: 170px; /* Set a fixed height in pixels */
+  object-fit: cover;
+  border-radius: 50%; /* Change border radius to 50% for a round shape */
+  box-shadow: 0 2px 4px white;
+  transition: width 0.3s ease, height 0.3s ease; /* Add transition properties */
+}
+
+.container-img:hover {
+  width: 200px; /* Increase width on hover */
+  height: 200px; /* Increase height on hover */
+}
+
+
+header{
+  background: #8D8078;/* background color in logo title **/
+  color:#ffffff;/* color of savior solution**/
+  padding-top:2px;
+  min-height:70px;
+  border-bottom:#404040 3px solid; 
+    position: sticky;
+  top: 0;
+}
+
+ul{/* margin for home, search and about */
+  margin:0;
+  padding:0;
+  
+}
+
+
+header a{/* design code for home, seach and about**/
+  color:white;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
+}
+header a:active {/* design shadow bg*/
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+header li{/* home, search and about positioning */
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float:left;
+}
+
+header #branding h1{ /* savior solution title */
+  margin-top:2px;
+    float: left;
+}
+
+header #branding .logoimg {/* savior solution logo pic*/
+  float: left;
+  margin-right: 10px; /* Adjust the margin as per your preference */
+  width: 50px; /* Set a fixed width of 50px */
+  height: 50px; /* Set a fixed height of 50px */
+  object-fit: cover; /* Maintain aspect ratio and cover the space */
+}
+header nav{/* alining home, search and about button */
+  float:right;
+  margin-top:10px;
+}
+
+header .highlight, header .current a{/* design for home button */
+  font-weight:bold;
+}header a:hover{
+  color:#AFB2A7;/* animation design for search and about button                 */
+  font-weight:bold;
+}
+
+/* popular dishes */
+ #showcase .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	margin-top:20px;
+  }
+/* popular dishes name*/
+  #showcase h1 {
+    font-size: 40px;
+    margin: 0;
+    margin-right: 20px;
+	 padding: 1px;
+  }
+/* popular dishes plate pic*/
+  #showcase .plate {
+    width: 200px; /* Adjust the width as per your preference */
+  }
+
+
+
+#recipe-search {/* background design in search recipe */
+  padding: 15px;
+  color: #ffffff;
+  background: #35424a;
+}
+
+#recipe-search h1 {/* search recipe title design */
+  float: center;
+}
+
+#recipe-search form {/* search recipe search bar design */
+  float: center;
+  margin-top: 15px;
+  	border-radius: 6px;
+}
+
+#recipe-search input[type="text"] {/* search bar design */
+  padding: 4px;
+  height: 25px;
+  width: 250px;
+  	border-radius: 6px;
+}
+
+#recipe-search {/* search recipe spacing */
+  padding: 3%;
+}
+.button_1{/* search recipe button design */
+  height:38px;
+  background:#8D807A;
+  border:0;
+  padding-left: 20px;
+  padding-right:20px;
+  color:#ffffff;
+  	border-radius: 6px;
+}.active, .button_1:hover {
+	background:#FF6A00;/* recipe button animation */
+}
+
+
+/* search list recipe */
+.search-list {
+  padding:15px;
+  background:#35424a;
+  color:#ffffff;
+  margin-top:10px;
+  margin-bottom:10px;
+    height: 200px;
+  width: 250px;
+  float:center;
+}
+
+#recipe-search .container .recipe--list{
+	display: flex;
+	justify-content:space-between;
+	flex-wrap: wrap;
+	text-align:center;
+}
+
+/* recipe suggest*/
+#boxes {
+  margin-top: 40px;
+  font-size:20px;
+}
+
+
+#boxes .box {/* aligning position of suggest recipe */
+  float: left;
+  text-align: center;
+  width: 22%; /* Adjust the width as per your preference */
+  padding: 10px;
+}
+
+#boxes .box img {/* pic of recipe suggest in home */
+		width: 70%;
+        height: 50%; /* Adjust the height as desired */
+        object-fit: cover;
+        border-radius: 10px; /* Add border radius if desired */
+        box-shadow: 0 2px 4px white;
+		
+}
+
+
+.vid_button {
+  /* vid button design */
+  background: #8D807A;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  transition: 0.3s;
+  border-radius: 4px;
+
+  /* Center align */
+  justify-content: center;
+  align-items: center;
+}
+.vid-r {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  margin: 1;
+        align-items: center;
+}
+
+	}.active, .vid_button:hover {
+	background:#FF6A00;/* vid button animation */
+}
+	
+.recipe_button{/*recipe button design */
+	background:#8D807A;
+	color:white;
+	font-weight:bold;
+	cursor:pointer;
+	padding: 12px;
+	width:100%;
+	border:none;
+	transition:0.3s;
+	border-radius: 4px;
+}
+.recipe_menu{/* recipe menu design */
+	padding: 0 12px;
+	background-color:#EAEAEA;
+	max-height:0px;
+	overflow:hidden;
+	transition: max-height 0.3s ease-out;
+	border-radius: 4px;
+}
+.active, .recipe_button:hover {
+	background:#FF6A00;/* recipe button animation */
+}
+
+
+footer{/* abaout in savior solution home */
+  padding:20px;
+  margin-top:20px;
+  color:#ffffff;
+  background-color:#8C7F79;
+  text-align: center;}
+  
+
+
+@media(max-width: 768px){/* aligning of all position in website */
+  header #branding,
+  header nav,
+  header nav li,
+  #recipe-search h1,
+  #recipe-search form,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar,.recipe_menu,#products,.vid-r{
+    float:none;
+    text-align:center;
+    width:100%;
+  }
+
+  header{/* spacing of title, home, search and about */
+    padding-bottom:20px;
+  }
+
+  #recipe-search h1{/* title of recipe search */
+    margin-top:40px;
+  }
+
+  #recipe-search button, .quote button{/* button of recipe search */
+    display:block;
+    width:100%;
+  }
+
+  #recipe-search form input[type="text"], .quote input, .quote textarea{/* search bar of recipe search */
+    width:100%;
+    margin-bottom:5px;
+	
+  }
+}
+/* about */
+ul#services li{/* border design of about comments */
+  list-style: none;
+  padding:20px;
+  border: #cccccc solid 1px;
+  margin-bottom:5px;
+  background:#e6e6e6;
+}
+ul{
+  margin:0;
+  padding:0;
+}
+    #main {/* positioning of all about */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #main-col .page-title {/* positioning of about title */
+      text-align: center;
+    }
+    #main-col .h4 {/* positioning of happy cooking*/
+      text-align: center;
+    }
+
+/* recipe list */
+
+#products {/* recipe list positioning*/
+  padding: 1px;
+  margin: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  	border-radius:40px;
+}
+
+#products li {/* recipe list design*/
+  flex-basis: calc(25% - 20px);
+  padding: 10px;
+  background: #8D807A;
+  border: 3px solid #756053;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#products img {/* recipe list image deign */
+  max-width: 100%;
+  height: auto;
+  	border-radius: 20px;
+}
+
+.food-name {/* recipe list name design*/
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.recipe {/* recipe list recipe design*/
+  margin-bottom: 10px;
+}
+
+.category {/* recipe list procedure deign*/
+  font-style: italic;
+}
+.box-1 {
+  background-color: #F0F0F0; /* Set the desired background color */
+  padding: 20px; /* Add some padding to the box */
+  text-align: center; /* Center align the content */
+    float: left;
+  text-align: center;
+  width: 22%; /* Adjust the width as per your preference */
+  padding: 10px;
+  margin-bottom: 20px; /* Add margin-bottom to create space between box-1 elements */
+}
+
+
+
+/* Flexbox styling for recipe foods */
+#recipe-search .search-form
+ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#results {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+.recipe_menu{
+	
+}
+.recipe {/* design for recipe in recipe list */
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid white;
+  background:#D8C9A8;
+  	border-radius: 10px;
+}
+
+.recipe-image {/* design image of recipe in recipe list */
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  
+}
+
+
+
+.recipe p {/* design of procedure in recipe list  */
+  margin-bottom: 5px;
+}.recipe p2 {/* design of procedure in recipe list  */
+  margin-bottom: 10px;
+}
+
+.recipe video {/* design of video in recipe list*/
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+
+#recipe-search h2 {/* title of recipe result*/
+  color: grey;
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}h4 {
+  color: black;
+  font-size: 20px; /* Adjust the font size to your preference */
+  text-align: center;
+}
+
+
+
+.recipe p2 {/* text color of */
+  margin-bottom: 10px;
+  color: pink;
+}
+
+/* Additional effects */
+.recipe {/* design of recipe in recipe search*/
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid white;
+  background: #D8C9A8;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}.recipe:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-image {/* design of image in recipe search*/
+  max-width: 40%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}.recipe-image:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recipe video {/* design of video in recipe search*/
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}.recipe video:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#results {/* text color of all text in result in search recipe*/
+  color: black;
+}
+
+
+.favorite-button {/* design of favorite button on search recipe*/
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}.favorite-button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.favorite-button-2 { /* developers button */
+text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+  background-color: #8C7F79; 
+  color: #ffffff;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  animation: color-animation 2s ease-in-out infinite;
+  
+}
+
+.favorite-button-2:hover {/* developers button animation*/
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #665c56; /* Add your desired hover background color here */
+  animation: none; /* Disable the animation on hover */
+}
+@keyframes color-animation {
+  0% {
+    background-color: #8C7F79;
+  }
+  50% {
+    background-color: #665c56;
+  }
+  100% {
+    background-color: #8C7F79;
+  }
+}
+
+
